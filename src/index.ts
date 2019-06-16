@@ -1,3 +1,5 @@
+import { createStore } from "redux";
+
 const BASE_PAY = "BASE_PAY";
 const REIMBURSEMENT = "REIMBURSEMENT";
 const BONUS = "BONUS";
@@ -127,3 +129,18 @@ export const payrollEngineReducer = (
       return state;
   }
 };
+
+if (process.env.JEST_WORKER_ID) {
+  const store = createStore(payrollEngineReducer, initialState);
+  const unsubscribe = store.subscribe(() => console.log(store.getState()));
+
+  store.dispatch(processBasePay(300));
+  store.dispatch(processReimbursement(50));
+  store.dispatch(processBonus(100));
+  store.dispatch(processStockOptions(15));
+  store.dispatch(processPayDay());
+  store.dispatch(processReimbursement(50));
+  store.dispatch(processPayDay());
+  store.dispatch(processPayDay());
+  unsubscribe();
+}
