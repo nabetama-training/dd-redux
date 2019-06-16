@@ -1,0 +1,33 @@
+{
+  "name": "dd-redux",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "tsc && node .bin/index.js",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/nabetama-training/dd-redux.git"
+  },
+  "keywords": [
+    "redux",
+    "typescript"
+  ],
+  "author": "Mao Nabeta",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nabetama-training/dd-redux/issues"
+  },
+  "jest": {
+    "preset": "ts-jest"
+  },
+  "homepage": "https://github.com/nabetama-training/dd-redux#readme",
+  "devDependencies": {
+    "@types/jest": "^24.0.14",
+    "@types/node": "^12.0.8",
+    "jest": "^24.8.0",
+    "ts-jest": "^24.0.2",
+    "typescript": "^3.5.2"
+  }
+}
