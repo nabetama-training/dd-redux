@@ -21,3 +21,27 @@ interface PayHistoryState {
   totalPay: number;
   totalCompensation: number;
 }
+
+export const processBasePay = (amount: number): PayrollAction => ({
+  type: BASE_PAY,
+  amount,
+});
+
+export const processReimbursement = (amount: number): PayrollAction => ({
+  type: REIMBURSEMENT,
+  amount,
+});
+
+export const processBonus = (amount: number): PayrollAction => ({
+  type: BONUS,
+  amount,
+});
+
+export const processStockOptions = (amount: number): PayrollAction => ({
+  type: STOCK_OPTIONS,
+  amount,
+});
+
+export const processPayDay = (): PayrollAction => ({
+  type: PAY_DAY,
+});
