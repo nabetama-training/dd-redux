@@ -8,3 +8,16 @@ interface PayrollAction {
   type: string;
   amount?: number;
 }
+interface PayStubState {
+  basePay: number;
+  reimbursement: number;
+  bonus: number;
+  stockOptions: number;
+  totalPay: number;
+  payHistory: Array<PayHistoryState>;
+}
+
+interface PayHistoryState {
+  totalPay: number;
+  totalCompensation: number;
+}
