@@ -4,10 +4,13 @@ const BONUS = "BONUS";
 const STOCK_OPTIONS = "STOCK_OPTIONS";
 const PAY_DAY = "PAY_DAY";
 
+// action
 interface PayrollAction {
   type: string;
   amount?: number;
 }
+
+// states
 interface PayStubState {
   basePay: number;
   reimbursement: number;
@@ -22,6 +25,7 @@ interface PayHistoryState {
   totalCompensation: number;
 }
 
+// action functions
 export const processBasePay = (amount: number): PayrollAction => ({
   type: BASE_PAY,
   amount,
